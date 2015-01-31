@@ -33,8 +33,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class MainActivity extends ActionBarActivity {
-    private static final String TAG = "CamTestActivity";
+public class CameraActivity extends ActionBarActivity {
     protected boolean released = false;
     protected int idList = 0;
     protected ArrayList<Prompt> prompts = new ArrayList<>();
@@ -126,7 +125,7 @@ public class MainActivity extends ActionBarActivity {
     PictureCallback mPicture = new PictureCallback() {
         @Override
         public void onPictureTaken(byte[] data, Camera camera) {
-            Log.d(TAG,"swag");
+
             File pictureFile = getOutputMediaFile();
             if (pictureFile == null) {
                 return;
